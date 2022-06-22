@@ -7,14 +7,11 @@ import { DataService } from '../data.service';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
-  product:any;  
+  products:any;  
 
   constructor(private dataservice:DataService) { }
 
-  ngOnInit(){
-    this.dataservice.getItem(this.product).subscribe((data:any)=>{
-      this.product = data;
-    })
+  ngOnInit(): void{
   }
 
 }

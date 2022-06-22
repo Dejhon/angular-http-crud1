@@ -14,6 +14,6 @@ export class DataService {
   }
 
   public getItem(id:number){
-    return this.httpclient.get<any>("http://localhost:3000/productList/"+id);
+    return this.httpclient.get<any>("http://localhost:3000/products/"+id);
   }
 }
