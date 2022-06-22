@@ -1,0 +1,15 @@
+.card_wrapper{
+    width: 90%;
+}
+
+mat-card{
+    width: 100px;
+}
+
+.card{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+}

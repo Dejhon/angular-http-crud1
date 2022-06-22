@@ -12,4 +12,8 @@ export class DataService {
   public sendGetRequest(){
     return this.httpclient.get<any[]>(this.REST_API_SERVER)
   }
+
+  public getItem(id:number){
+    return this.httpclient.get<any>("http://localhost:3000/productList/"+id);
+  }
 }
