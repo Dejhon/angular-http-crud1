@@ -18,4 +18,7 @@ export class HomeComponent implements OnInit {
     })
   }
 
+  itemDets(id:any){
+    this.itemRouter.navigate(['details/' + id]);
+  }
 }

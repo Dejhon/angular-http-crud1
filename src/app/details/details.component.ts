@@ -14,15 +14,17 @@ export class DetailsComponent implements OnInit {
   constructor(private dataservice:DataService, private itemRoute: ActivatedRoute) { }
 
   ngOnInit(){
+    this.getItem();
+  }
+
+  getItem(){
     const routeParams = this.itemRoute.snapshot.paramMap;
     const productIdFromRoute = Number(routeParams.get('id'));
-    console.log(productIdFromRoute);
     
     // Find the product that correspond with the id provided in route.
-    this.product = this.dataservice.getItem(productIdFromRoute).subscribe(
-      (product) => product.id === productIdFromRoute);
-      console.log(this.product);
-      
+    this.dataservice.getItem(productIdFromRoute).subscribe((data:any[]) =>{
+          this.product = data
+    });
   }
 
   addToCart(){

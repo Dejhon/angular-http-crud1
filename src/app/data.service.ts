@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
+
 export class DataService {
   private REST_API_SERVER = "http://localhost:3000/products";
 
@@ -14,6 +15,6 @@ export class DataService {
   }
 
   public getItem(id:number){
-    return this.httpclient.get<any>("http://localhost:3000/products/"+id);
+    return this.httpclient.get<any[]>(this.REST_API_SERVER + id);
   }
 }
