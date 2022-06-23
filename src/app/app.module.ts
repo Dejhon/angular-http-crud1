@@ -13,10 +13,14 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { ContactComponent } from './contact/contact.component';
-import { DetailsComponent } from './details/details.component'
+import { DetailsComponent } from './details/details.component';
+import { AddproductComponent } from './addproduct/addproduct.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AboutComponent, ContactComponent, DetailsComponent],
+  declarations: [AppComponent, HomeComponent, AboutComponent, ContactComponent, DetailsComponent, AddproductComponent],
 
   imports: [
     BrowserModule,
@@ -27,7 +31,11 @@ import { DetailsComponent } from './details/details.component'
     MatIconModule,
     MatCardModule,
     MatButtonModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

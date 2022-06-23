@@ -14,6 +14,10 @@ export class DataService {
     return this.httpclient.get<any[]>(this.REST_API_SERVER)
   }
 
+  public  additem(data:any){
+    return this.httpclient.post<any[]>(this.REST_API_SERVER, data)
+  }
+
   public getItem(id:number){
     return this.httpclient.get<any[]>(this.REST_API_SERVER + '/' + id);
   }

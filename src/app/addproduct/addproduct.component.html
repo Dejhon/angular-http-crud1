@@ -1,0 +1,39 @@
+<form  [formGroup]="Items" (submit)="onSubmit()">
+    <div class="container">
+        <div class="name">
+            <mat-form-field appearance="outline">
+                <mat-label>Item Name</mat-label>
+                <input matInput type="text" placeholder="Name of Product" formControlName="itemName">
+            </mat-form-field>
+        </div>
+        <div class="description">
+            <mat-form-field appearance="outline">
+                <mat-label>Description</mat-label>
+                <textarea matInput formControlName="itemDescription"></textarea>
+            </mat-form-field>
+        </div>
+        <div class="price">
+            <mat-form-field appearance="outline">
+                <mat-label>Price</mat-label>
+                <input matInput type="number" class="example-right-align" placeholder="0" formControlName="itemPrice">
+                <span matPrefix>$&nbsp;</span>
+                <span matSuffix>.00</span>
+            </mat-form-field>
+        </div>
+        <div class="image">
+            <mat-form-field appearance="outline">
+                <mat-label>Item Image Link</mat-label>
+                <input matInput type="url" placeholder="URL" formControlName="itemUrl">
+            </mat-form-field>
+        </div>
+        <div class="quantiy">
+            <mat-form-field appearance="outline" >
+                <mat-label>Quantity</mat-label>
+                <input matInput type="number" class="example-right-align" placeholder="0" formControlName="itemQuantity">
+              </mat-form-field>
+        </div>
+        <div class="sub_btn">
+            <button mat-flat-button color="primary">SAVE</button>
+        </div>
+    </div>
+</form>
