@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,8 +9,9 @@ import { DataService } from '../data.service';
 })
 export class HomeComponent implements OnInit {
   products:any = [];
+  product:any;
 
-  constructor(private dataservice: DataService) { }
+  constructor(private dataservice: DataService, private itemRouter:Router) { }
 
   ngOnInit(){
     this.dataservice.sendGetRequest().subscribe((data:any[]) =>{

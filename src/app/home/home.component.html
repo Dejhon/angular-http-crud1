@@ -12,6 +12,7 @@
             </mat-card-content>
             <mat-card-actions>
                <button mat-button routerLink="/details">Buy Meal</button>
+               <button mat-button [routerLink]="['/details', product.id]">View Item</button>
             </mat-card-actions>
       </mat-card>
    </div>

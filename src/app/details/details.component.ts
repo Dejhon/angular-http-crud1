@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-details',
@@ -7,11 +8,26 @@ import { DataService } from '../data.service';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
-  products:any;  
+  product:any;
+  products:any
 
-  constructor(private dataservice:DataService) { }
 
-  ngOnInit(): void{
+  constructor(private dataservice:DataService, private itemRoute: ActivatedRoute) { }
+
+  ngOnInit(){
+    const routeParams = this.itemRoute.snapshot.paramMap;
+    const productIdFromRoute = Number(routeParams.get('id'));
+    console.log(productIdFromRoute);
+    
+    // Find the product that correspond with the id provided in route.
+    this.product = this.dataservice.getItem(productIdFromRoute).subscribe(
+      product => product.id === productIdFromRoute);
+      console.log(this.product);
+      
+  }
+
+  addToCart(){
+    alert('Product Added to Cart')
   }
 
 }
