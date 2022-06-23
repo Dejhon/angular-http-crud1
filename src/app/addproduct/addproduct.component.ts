@@ -23,23 +23,23 @@ export class AddproductComponent implements OnInit {
   })
 
   get itemName(){
-    return this.Items.get('fullName')
+    return this.Items.get('itemName')
   }
 
   get itemDescription(){
-    return this.Items.get('description')
+    return this.Items.get('itemDescription')
   }
 
   get itemPrice(){
-    return this.Items.get('price')
+    return this.Items.get('itemPrice')
   }
 
-  get itemurl(){
-    return this.Items.get('url')
+  get itemUrl(){
+    return this.Items.get('itemUrl')
   }
 
   get itemQuantity(){
-    return this.Items.get('quantity')
+    return this.Items.get('itemQuantity')
   }
 
 
@@ -51,7 +51,7 @@ export class AddproductComponent implements OnInit {
         name: this.itemName?.value,
         description: this.itemDescription?.value,
         price: this.itemPrice?.value,
-        url: this.itemurl?.value,
+        url: this.itemUrl?.value,
         quantity: this.itemQuantity?.value
       }
   
@@ -63,7 +63,7 @@ export class AddproductComponent implements OnInit {
         itemInfo.append('quantity',data.quantity);
   
           this.dataservice.additem(itemInfo).subscribe({
-            next:(resp: any)=>{
+            next:(res: any)=>{
               alert('Sign up successful');
               this.route.navigate(['/'])
             },
@@ -73,21 +73,6 @@ export class AddproductComponent implements OnInit {
           })
         }
   }
-
-  // onSubmit(){
-  //   if(this.Items?.invalid){
-  //     alert('Form Must be Completed')
-  //   }else{
-  //     this.dataservice.additem(this.Items).subscribe({
-  //       next:(res:any)=>{
-  //         alert('Item Added to Database')
-  //         this.route.navigate(['/'])
-  //       },
-  //       error:()=>{          
-  //       }
-  //     })
-  //   }//end of else
-  // }//end of submit function
 
   ngOnInit(): void {
   }
