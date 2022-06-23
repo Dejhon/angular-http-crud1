@@ -399,6 +399,22 @@
       "price": "802.00",
       "imageUrl": "https://source.unsplash.com/1600x900/?food",
       "quantity": 97259
+    },
+    {
+      "id": 288,
+      "name": "Cake",
+      "description": "Delicious cake with pistachio and raspberries",
+      "price": 395,
+      "imageUrl": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80",
+      "quantity": 7262
+    },
+    {
+      "id": 978,
+      "name": "Hawaiian Chicken Pizza",
+      "description": "Freshly Baked Pizza",
+      "price": 900,
+      "imageUrl": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=481&q=80",
+      "quantity": 89222
     }
   ]
 }

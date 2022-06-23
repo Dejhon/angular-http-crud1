@@ -1,21 +1,22 @@
-<form  [formGroup]="Items" (submit)="onSubmit()">
+<form  [formGroup]="Items" (submit)="onSubmit()" autocomplete="off">
     <div class="container">
+        
         <div class="name">
             <mat-form-field appearance="outline">
                 <mat-label>Item Name</mat-label>
-                <input matInput type="text" placeholder="Name of Product" formControlName="itemName">
+                <input matInput type="text" placeholder="Name of Product" formControlName="name">
             </mat-form-field>
         </div>
         <div class="description">
             <mat-form-field appearance="outline">
                 <mat-label>Description</mat-label>
-                <textarea matInput formControlName="itemDescription"></textarea>
+                <textarea matInput formControlName="description"></textarea>
             </mat-form-field>
         </div>
         <div class="price">
             <mat-form-field appearance="outline">
                 <mat-label>Price</mat-label>
-                <input matInput type="number" class="example-right-align" placeholder="0" formControlName="itemPrice">
+                <input matInput type="number" class="example-right-align" placeholder="0" formControlName="price">
                 <span matPrefix>$&nbsp;</span>
                 <span matSuffix>.00</span>
             </mat-form-field>
@@ -23,13 +24,13 @@
         <div class="image">
             <mat-form-field appearance="outline">
                 <mat-label>Item Image Link</mat-label>
-                <input matInput type="url" placeholder="URL" formControlName="itemUrl">
+                <input matInput type="url" placeholder="URL" formControlName="imageUrl">
             </mat-form-field>
         </div>
         <div class="quantiy">
             <mat-form-field appearance="outline" >
                 <mat-label>Quantity</mat-label>
-                <input matInput type="number" class="example-right-align" placeholder="0" formControlName="itemQuantity">
+                <input matInput type="number" class="example-right-align" placeholder="0" formControlName="quantity">
               </mat-form-field>
         </div>
         <div class="sub_btn">
