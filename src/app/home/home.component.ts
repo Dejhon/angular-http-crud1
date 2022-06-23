@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   products:any = [];
-  product:any;
 
   constructor(private dataservice: DataService, private itemRouter:Router) { }
 

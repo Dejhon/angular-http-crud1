@@ -9,7 +9,6 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetailsComponent implements OnInit {
   product:any;
-  products:any
 
 
   constructor(private dataservice:DataService, private itemRoute: ActivatedRoute) { }
@@ -21,7 +20,7 @@ export class DetailsComponent implements OnInit {
     
     // Find the product that correspond with the id provided in route.
     this.product = this.dataservice.getItem(productIdFromRoute).subscribe(
-      product => product.id === productIdFromRoute);
+      (product) => product.id === productIdFromRoute);
       console.log(this.product);
       
   }
