@@ -63,7 +63,7 @@ export class AddproductComponent implements OnInit {
         itemInfo.append('quantity',data.quantity);
   
           this.dataservice.additem(itemInfo).subscribe({
-            next:(res: any)=>{
+            next:()=>{
               alert('Sign up successful');
               this.route.navigate(['/'])
             },
