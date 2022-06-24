@@ -415,6 +415,14 @@
       "price": 900,
       "imageUrl": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=481&q=80",
       "quantity": 89222
+    },
+    {
+      "id": 440,
+      "name": "Double Stacked Cheese Burger",
+      "description": "A cheeseburger is a hamburger topped with cheese. Traditionally, the slice of cheese is placed on top of the meat patty.",
+      "price": 490,
+      "imageUrl": "https://images.unsplash.com/photo-1510693871426-2475f958703b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80",
+      "quantity": 93837
     }
   ]
 }

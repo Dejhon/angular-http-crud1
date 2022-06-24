@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   products:any = [];
+  filteredProducts: any = [];
 
   page: number = 1;
   count: number = 0;
@@ -24,7 +25,8 @@ export class HomeComponent implements OnInit {
   getAllItems(){
     this.dataservice.sendGetRequest().subscribe((data:any[]) =>{
       this.products = data;
-    })
+      this.filteredProducts = data
+    })    
   }
 
   itemDets(id:any){
