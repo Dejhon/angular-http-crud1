@@ -1,10 +1,20 @@
 <h2>Product Details</h2>
 
-<div *ngIf="product">
-    <img style="height: 250px;width: 30%;" src="{{product.imageUrl}}">
-    <h3>{{ product.name }}</h3>
-    <h4>{{ product.price | currency }}</h4>
-    <p>{{ product.description }}</p>  
-  <button (click)="addToCart()">Buy</button>
+<div class="card_wrapper">
+  <div class="card">
+     <mat-spinner *ngIf="!product"></mat-spinner>
+     <mat-card style="margin-top:12px; width: 300px;">
+           <mat-card-header>
+              <mat-card-title>{{product.name}}</mat-card-title>
+              <mat-card-subtitle>{{product.price}} $/ {{product.quantity}}</mat-card-subtitle>
+           </mat-card-header>
+           <mat-card-content>
+              <img style="height: 150px;width: 100%;" src="{{product.imageUrl}}">
+              <p style="height: 50px;">{{product.description}}</p>
+           </mat-card-content>
+           <mat-card-actions style="margin-top: 100px;">
+              <button mat-button (click)="addToCart()">Buy</button>              
+           </mat-card-actions>
+     </mat-card>
+  </div>
 </div>
-<!-- </div> -->

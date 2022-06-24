@@ -14,13 +14,10 @@ export class HomeComponent implements OnInit {
   count: number = 0;
   pageSize: number = 12;
   pageSizes: any = [5, 10, 15, 20]
-
-  
-  searchText:any;
-  filterLocation:any;
-  tour:any;
-  filter:any="Filter By Location"
-
+    
+  filterPrice:any;
+  // maxPrice: number = 1000;
+  // minPrice: number = 0;
   constructor(private dataservice: DataService, private itemRouter:Router) { }
 
   ngOnInit(){
@@ -30,6 +27,7 @@ export class HomeComponent implements OnInit {
   getAllItems(){
     this.dataservice.sendGetRequest().subscribe((data:any[]) =>{
       this.products = data;
+      // return data[0].price >= this.minPrice && data[0].price <= this.maxPrice;
     })
   }
 
