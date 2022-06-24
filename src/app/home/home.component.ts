@@ -10,9 +10,24 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
   products:any = [];
 
+  page: number = 1;
+  count: number = 0;
+  pageSize: number = 12;
+  pageSizes: any = [5, 10, 15, 20]
+
+  
+  searchText:any;
+  filterLocation:any;
+  tour:any;
+  filter:any="Filter By Location"
+
   constructor(private dataservice: DataService, private itemRouter:Router) { }
 
   ngOnInit(){
+   this.getAllItems()
+  }
+
+  getAllItems(){
     this.dataservice.sendGetRequest().subscribe((data:any[]) =>{
       this.products = data;
     })
@@ -20,5 +35,16 @@ export class HomeComponent implements OnInit {
 
   itemDets(id:any){
     this.itemRouter.navigate(['details/' + id]);
+  }
+
+  onPageDataChange(event: any){
+    this.page = event;
+    this.getAllItems();
+  }
+
+  onPageSizeChange(event: any){
+    this.pageSize = event.target.value;
+    this.page = 1;
+    this.getAllItems();
   }
 }

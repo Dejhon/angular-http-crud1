@@ -13,3 +13,8 @@ mat-card{
     grid-template-rows: 1fr;
     gap: 10px;
 }
+
+.paginator{
+    margin: auto;
+    width: 450px;
+}
